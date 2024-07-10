@@ -14,8 +14,24 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    "This is a plugin for the Project Qvog."
-  ]]></description>
+     <![CDATA[
+    <p>This is a plugin for the project QVoG(https://github.com/QVoG-BUAA/) based on the IntelliJ Platform SDK.<br/></p>
+
+    <h2>## Before Move on</h2>
+
+    <p>In the current version, this plugin requires users to configure the initial version of the detection tool themselves.<br/>
+    Specifically, users need to store the corresponding detection tools extracted in jar format locally in the
+    specifiedformat, or directly use the content prepared for the users.</br>
+    In addition, this detection tool requires you to configure the Gremlin server properly.</br></p>
+
+    <h2>## How to use it</h2>
+
+    <p>Firstly, please set the IP address and port number of the server, as well as configure the local detection tool
+    directory, such as `E:/CodeGraphQLExtended/tools/CGQL`</br>
+    Subsequently, you can convert the file to graphs and upload to the server.`</br>
+    Finally, you can query the information you want from the server.`</br></p>
+        ]]>
+    </description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
