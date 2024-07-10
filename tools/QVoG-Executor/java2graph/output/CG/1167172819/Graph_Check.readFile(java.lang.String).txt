@@ -1,0 +1,9 @@
+FilePath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input\Graph_Check
+RootPath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input
+method:Graph_Check.readFile(java.lang.String)
+{
+.Graph_Check.readFile(java.lang.String) -> java.nio.file.Files.readAllLines(java.nio.file.Path) -> 301;
+.Graph_Check.readFile(java.lang.String) -> java.nio.file.Paths.get(java.lang.String,java.lang.String[]) -> 301;
+.Graph_Check.readFile(java.lang.String) -> java.lang.Throwable.printStackTrace() -> 306;
+.Graph_Check.readFile(java.lang.String) -> java.lang.Throwable.printStackTrace() -> 311;
+}

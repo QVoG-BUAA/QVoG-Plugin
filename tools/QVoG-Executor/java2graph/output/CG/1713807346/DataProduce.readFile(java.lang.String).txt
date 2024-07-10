@@ -1,0 +1,10 @@
+FilePath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input\DataProduce
+RootPath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input
+method:DataProduce.readFile(java.lang.String)
+{
+.DataProduce.readFile(java.lang.String) -> java.lang.String.endsWith(java.lang.String) -> 12;
+.DataProduce.readFile(java.lang.String) -> java.nio.file.Files.readAllLines(java.nio.file.Path) -> 18;
+.DataProduce.readFile(java.lang.String) -> java.nio.file.Paths.get(java.lang.String,java.lang.String[]) -> 18;
+.DataProduce.readFile(java.lang.String) -> java.lang.Throwable.printStackTrace() -> 24;
+.DataProduce.readFile(java.lang.String) -> java.lang.Throwable.printStackTrace() -> 29;
+}

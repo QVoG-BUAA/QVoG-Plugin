@@ -1,0 +1,56 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.Qvog_Plugin</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>QVoG</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="20231098@buaa.edu.cn" >QVoG</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    "This is a plugin for the Project Qvog."
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService
+                serviceImplementation="Qvog_Plugin.action.ServerState"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group
+                id="org.intellij.sdk.action.GroupedActions"
+                text="QVoG Plugin"
+                popup="true">
+            <add-to-group
+                    group-id="EditorPopupMenu"
+                    anchor="after"
+                    relative-to-action="Config"/>
+
+            <action id="Config"
+                    class="Qvog_Plugin.action.Config"
+                    text="Config"
+                    description="The config of gremlin server" />
+            <action id="Transfor"
+                    class="Qvog_Plugin.action.Transfor"
+                    text="Convert"
+                    description="Convert code into graph" />
+            <action id="Query"
+                    class="Qvog_Plugin.action.Query"
+                    text="Query"
+                    description="Query from the Server" />
+        </group>
+    </actions>
+</idea-plugin>

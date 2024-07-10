@@ -1,0 +1,11 @@
+FilePath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input\Joern_check
+RootPath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input
+method:Joern_check.export()
+{
+.Joern_check.export() -> java.lang.Runtime.getRuntime() -> 59;
+.Joern_check.export() -> java.lang.Runtime.exec(java.lang.String[]) -> 60;
+.Joern_check.export() -> java.lang.Process.waitFor() -> 61;
+.Joern_check.export() -> java.io.PrintStream.println(java.lang.String) -> 64;
+.Joern_check.export() -> java.lang.Throwable.printStackTrace() -> 73;
+.Joern_check.export() -> java.lang.Throwable.printStackTrace() -> 78;
+}
