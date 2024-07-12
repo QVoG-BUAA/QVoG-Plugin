@@ -5,6 +5,7 @@ import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.ValidationInfo;
 import com.intellij.ui.ColoredListCellRenderer;
 import com.intellij.ui.components.JBList;
+import com.intellij.ui.components.JBScrollPane;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
@@ -56,16 +57,23 @@ public class QueryDialogWrapper extends DialogWrapper {
                 append(value);
             }
         };
-
-        list.setCellRenderer(coloredListCellRenderer);
+        // 添加行高
+        list.setFixedCellHeight(30);
+        // 添加行高
+        list.setFixedCellWidth(250);
+        // 设置选择模式
         list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-        list.setPreferredSize(new Dimension(300, 512));
+        //
+        list.setCellRenderer(coloredListCellRenderer);
+        //list.setPreferredSize(new Dimension(256, 512));
 
         JPanel panel = new JPanel();
+        JBScrollPane scrollPane = new JBScrollPane(list);
+        scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         panel.setLayout(new BorderLayout());
         panel.add(new JLabel("Select a Query:"), BorderLayout.NORTH);
-        panel.add(new JScrollPane(list), BorderLayout.CENTER);
-        panel.setPreferredSize(new Dimension(300, 600));
+        panel.add(scrollPane, BorderLayout.CENTER);
+        panel.setPreferredSize(new Dimension(320, 640));
 //        panel.add(decorator.createPanel(), BorderLayout.CENTER);
         return panel;
     }

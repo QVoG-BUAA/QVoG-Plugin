@@ -13,6 +13,7 @@ import kotlin.Pair;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+import java.sql.Time;
 import java.util.List;
 import java.util.Map;
 
@@ -29,6 +30,7 @@ public class Query extends AnAction{
         PsiFile psiFile = e.getData(CommonDataKeys.PSI_FILE);
         String dirPath = psiFile.getVirtualFile().getParent().getPath();
         String fileName = psiFile.getName();
+        Time start = new Time(System.currentTimeMillis());
 //        String lastFileName = server.getState().targetFileName;
         if(fileName.endsWith(".c") || fileName.endsWith(".cpp")) {
              try {
@@ -40,8 +42,13 @@ public class Query extends AnAction{
                             Order.QueryForTarget(server.getState().toolsPath, dirPath, queries, "cxx");
                     if(res != null)
                     {
+                        Time end = new Time(System.currentTimeMillis());
+                        Messages.showMessageDialog(project,
+                                "CQuery successfully executed, cost " + (end.getTime() - start.getTime()) / 1000 + "s",
+                                "Success", Messages.getInformationIcon());
                         QueryTable cQueryTable = new QueryTable(project, res);
-                        cQueryTable.show();
+                        cQueryTable.showAndGet();
+
                     }
                     else
                     {
@@ -66,6 +73,10 @@ public class Query extends AnAction{
                     Map<String, List<Pair<String, String>>> res =
                             Order.QueryForTarget(server.getState().toolsPath, dirPath, queries, "java");
                     if (res != null) {
+                        Time end = new Time(System.currentTimeMillis());
+                        Messages.showMessageDialog(project,
+                                "JavaQuery successfully executed, cost " + (end.getTime() - start.getTime()) / 1000 + "s",
+                                "Success", Messages.getInformationIcon());
                         QueryTable queryTable = new QueryTable(project, res);
                         queryTable.show();
                     } else {

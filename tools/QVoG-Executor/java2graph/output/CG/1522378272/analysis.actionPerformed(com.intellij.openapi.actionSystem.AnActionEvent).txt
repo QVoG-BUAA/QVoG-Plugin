@@ -1,5 +1,0 @@
-FilePath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input\analysis
-RootPath:E:\File\QVoG-Plugin\tools\QVoG-Executor\java2graph\input
-method:analysis.actionPerformed(com.intellij.openapi.actionSystem.AnActionEvent)
-{
-}
