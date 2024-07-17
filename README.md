@@ -1,5 +1,5 @@
 # QVoG-Plugin
-这是一个基于Jetbrains的为[QVoG检测工具](https://github.com/QVoG-BUAA)开发的插件
+这是一个为[QVoG检测工具](https://github.com/QVoG-BUAA)开发的插件，且支持Vscode、Jetbrains双平台
 
 ## 开始之前
 
