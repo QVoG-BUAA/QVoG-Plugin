@@ -1,8 +1,0 @@
-FilePath:E:\QVoG-Plugin\tools\QVoG-Executor\java2graph\input\Graph_Check
-RootPath:E:\QVoG-Plugin\tools\QVoG-Executor\java2graph\input
-method:Graph_Check.clean()
-{
-.Graph_Check.clean() -> java.lang.Runtime.getRuntime() -> 263;
-.Graph_Check.clean() -> java.lang.Runtime.exec(java.lang.String[]) -> 264;
-.Graph_Check.clean() -> java.lang.Throwable.printStackTrace() -> 268;
-}

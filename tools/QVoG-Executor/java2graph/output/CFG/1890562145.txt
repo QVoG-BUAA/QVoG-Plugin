@@ -15,7 +15,7 @@ method:scan String:filepath 10:39
 v: String scancmd = \".\joern-cli\joern-parse \" + filepath; 13
 v: System.out.println(scancmd); 14
 v: Runtime scanrun = Runtime.getRuntime(); 15
-v: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f); 16
+v: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42); 16
 v: int status = scanpro.waitFor(); 17
 v: status != 0 18
 v: System.out.println(\"Failed to call shell's command\"); 20
@@ -33,8 +33,8 @@ eend: System.out.println(scancmd); 13!14
 estart: System.out.println(scancmd);
 eend: Runtime scanrun = Runtime.getRuntime(); 14!15
 estart: Runtime scanrun = Runtime.getRuntime();
-eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f); 15!16
-estart: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f);
+eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42); 15!16
+estart: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42);
 eend: int status = scanpro.waitFor(); 16!17
 estart: int status = scanpro.waitFor();
 eend: status != 0 17!18
@@ -60,15 +60,15 @@ method:clean 41:53
 {
 v: String delcmd = \"rd /s /q result\"; 44
 v: Runtime delrun = Runtime.getRuntime(); 45
-v: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570); 46
+v: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93); 46
 v: int delsta = delpro.waitFor(); 47
 v: IOException exception 49
 v: exception.printStackTrace(); 51
 estart: String delcmd = \"rd /s /q result\";
 eend: Runtime delrun = Runtime.getRuntime(); 44!45
 estart: Runtime delrun = Runtime.getRuntime();
-eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570); 45!46
-estart: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570);
+eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93); 45!46
+estart: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93);
 eend: int delsta = delpro.waitFor(); 46!47
 estart: IOException exception
 eend: exception.printStackTrace(); 49!51
@@ -78,7 +78,7 @@ method:export 55:81
 {
 v: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\"; 58
 v: Runtime outrun = Runtime.getRuntime(); 59
-v: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c); 60
+v: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf); 60
 v: int status = outpro.waitFor(); 61
 v: status != 0 62
 v: System.out.println(\"Failed to call shell's command\"); 64
@@ -93,8 +93,8 @@ v: return false; 79
 estart: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\";
 eend: Runtime outrun = Runtime.getRuntime(); 58!59
 estart: Runtime outrun = Runtime.getRuntime();
-eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c); 59!60
-estart: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c);
+eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf); 59!60
+estart: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf);
 eend: int status = outpro.waitFor(); 60!61
 estart: int status = outpro.waitFor();
 eend: status != 0 61!62

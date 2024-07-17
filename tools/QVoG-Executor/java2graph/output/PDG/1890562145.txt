@@ -12,27 +12,27 @@ import:java.util.Date
 class:Joern_check
 method:scan String:filepath 10:39
 {
+v: int status = scanpro.waitFor(); 17
+v: System.out.println(\"Failed to call shell's command\"); 20
+v: System.out.println(scancmd); 14
 v: Enter Enter 10.39
 v: return true; 26
-v: System.out.println(\"Failed to call shell's command\"); 20
-v: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f); 16
-v: System.out.println(\"Scan Finished!\"); 25
-v: System.out.println(scancmd); 14
-v: status != 0 18
 v: String filepath 10
-v: Runtime scanrun = Runtime.getRuntime(); 15
-v: return false; 21
 v: String scancmd = \".\joern-cli\joern-parse \" + filepath; 13
-v: int status = scanpro.waitFor(); 17
+v: System.out.println(\"Scan Finished!\"); 25
+v: Runtime scanrun = Runtime.getRuntime(); 15
+v: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42); 16
+v: status != 0 18
+v: return false; 21
 estart: String filepath
 eend: String scancmd = \".\joern-cli\joern-parse \" + filepath; 10!13
 estart: String scancmd = \".\joern-cli\joern-parse \" + filepath;
 eend: System.out.println(scancmd); 13!14
 estart: String scancmd = \".\joern-cli\joern-parse \" + filepath;
-eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f); 13!16
+eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42); 13!16
 estart: Runtime scanrun = Runtime.getRuntime();
-eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f); 15!16
-estart: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f);
+eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42); 15!16
+estart: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42);
 eend: int status = scanpro.waitFor(); 16!17
 estart: int status = scanpro.waitFor();
 eend: status != 0 17!18
@@ -53,7 +53,7 @@ eend: System.out.println(scancmd); 10!14
 estart: Enter Enter
 eend: Runtime scanrun = Runtime.getRuntime(); 10!15
 estart: Enter Enter
-eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@51f); 10!16
+eend: Process scanpro = scanrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@42); 10!16
 estart: Enter Enter
 eend: int status = scanpro.waitFor(); 10!17
 estart: Enter Enter
@@ -62,23 +62,23 @@ eend: status != 0 10!18
 class:Joern_check
 method:clean 41:53
 {
-v: Enter Enter 41.53
-v: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570); 46
-v: int delsta = delpro.waitFor(); 47
-v: String delcmd = \"rd /s /q result\"; 44
 v: Runtime delrun = Runtime.getRuntime(); 45
+v: String delcmd = \"rd /s /q result\"; 44
+v: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93); 46
+v: Enter Enter 41.53
+v: int delsta = delpro.waitFor(); 47
 estart: String delcmd = \"rd /s /q result\";
-eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570); 44!46
+eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93); 44!46
 estart: Runtime delrun = Runtime.getRuntime();
-eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570); 45!46
-estart: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570);
+eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93); 45!46
+estart: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93);
 eend: int delsta = delpro.waitFor(); 46!47
 estart: Enter Enter
 eend: String delcmd = \"rd /s /q result\"; 41!44
 estart: Enter Enter
 eend: Runtime delrun = Runtime.getRuntime(); 41!45
 estart: Enter Enter
-eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@570); 41!46
+eend: Process delpro = delrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@93); 41!46
 estart: Enter Enter
 eend: int delsta = delpro.waitFor(); 41!47
 }
@@ -86,19 +86,19 @@ class:Joern_check
 method:export 55:81
 {
 v: return true; 68
-v: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\"; 58
-v: int status = outpro.waitFor(); 61
-v: Enter Enter 55.81
-v: Runtime outrun = Runtime.getRuntime(); 59
-v: status != 0 62
-v: return false; 65
-v: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c); 60
 v: System.out.println(\"Failed to call shell's command\"); 64
+v: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\"; 58
+v: Enter Enter 55.81
+v: int status = outpro.waitFor(); 61
+v: Runtime outrun = Runtime.getRuntime(); 59
+v: return false; 65
+v: status != 0 62
+v: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf); 60
 estart: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --out ./result\";
-eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c); 58!60
+eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf); 58!60
 estart: Runtime outrun = Runtime.getRuntime();
-eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c); 59!60
-estart: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c);
+eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf); 59!60
+estart: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf);
 eend: int status = outpro.waitFor(); 60!61
 estart: int status = outpro.waitFor();
 eend: status != 0 61!62
@@ -113,7 +113,7 @@ eend: String outcmd = \".\joern-cli\joern-export --repr=all --format=neo4jcsv --
 estart: Enter Enter
 eend: Runtime outrun = Runtime.getRuntime(); 55!59
 estart: Enter Enter
-eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@59c); 55!60
+eend: Process outpro = outrun.exec(new String[][]cn.edu.buaa.qvog.j2graph.j2cpg.pe.ExpressionInfo@bf); 55!60
 estart: Enter Enter
 eend: int status = outpro.waitFor(); 55!61
 estart: Enter Enter
@@ -122,18 +122,18 @@ eend: status != 0 55!62
 class:Joern_check
 method:main String[]:args 83:110
 {
-v: clean(); 91
-v: scan(filepath) 89
-v: Enter Enter 83.110
-v: reader = new BufferedReader(new InputStreamReader(System.in)); 86
-v: System.out.println(\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\"); 87
+v: String[] args 83
+v: System.out.println(\"Export Error!\"); 98
 v: export() 92
 v: System.out.println(\"Scan Error!\"); 103
-v: BufferedReader reader = null; 84
+v: Enter Enter 83.110
+v: scan(filepath) 89
 v: System.out.println(\"Success\"); 94
-v: String[] args 83
+v: BufferedReader reader = null; 84
+v: System.out.println(\"ë`?ö®ž©??Öœ?Àò?»ô?Èä?:\"); 87
+v: reader = new BufferedReader(new InputStreamReader(System.in)); 86
 v: String filepath = reader.readLine(); 88
-v: System.out.println(\"Export Error!\"); 98
+v: clean(); 91
 estart: reader = new BufferedReader(new InputStreamReader(System.in));
 eend: String filepath = reader.readLine(); 86!88
 estart: String filepath = reader.readLine();
@@ -164,17 +164,17 @@ eend: scan(filepath) 83!89
 class:Joern_check
 method:check 112:141
 {
-v: System.out.println(\"Success\"); 121
+v: return true; 122
+v: System.out.println(\"Scan Error!\"); 132
+v: Enter Enter 112.141
+v: String filepath = \"target.c\"; 115
 v: System.out.println(\"Export Error!\"); 126
 v: return false; 133
-v: Enter Enter 112.141
-v: System.out.println(\"Scan Error!\"); 132
-v: String filepath = \"target.c\"; 115
-v: clean(); 118
-v: return true; 122
 v: return false; 127
-v: scan(filepath) 116
 v: export() 119
+v: scan(filepath) 116
+v: clean(); 118
+v: System.out.println(\"Success\"); 121
 estart: String filepath = \"target.c\";
 eend: scan(filepath) 115!116
 estart: scan(filepath)

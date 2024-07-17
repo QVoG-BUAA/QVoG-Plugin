@@ -1,8 +1,1 @@
-{
-  "host" : "211.71.15.39",
-  "port" : 20010,
-  "includePath" : [ ],
-  "project" : "E:/QVoG-Plugin/tools/QVoG-Executor/c2graph/input/",
-  "dir" : "",
-  "highPrecision" : false
-}
+{"port":20010,"includePath":[],"project":"./input/","dir":"","highPrecision":false,"host":"211.71.15.39"}

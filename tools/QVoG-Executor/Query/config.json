@@ -1,16 +1,1 @@
-{
-  "gremlin" : {
-    "host" : "211.71.15.39",
-    "port" : 20010
-  },
-  "cache" : {
-    "type" : "none",
-    "redis" : {
-      "host" : "",
-      "port" : 6379,
-      "password" : null,
-      "db" : 0,
-      "shard" : 5120
-    }
-  }
-}
+{"gremlin":{"port":20010,"host":"211.71.15.39"},"cache":{"type":"none","redis":{"host":"","port":6379,"password":null,"db":0,"shard":5120}}}
