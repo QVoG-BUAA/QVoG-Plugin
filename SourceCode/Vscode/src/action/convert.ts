@@ -112,7 +112,7 @@ export async function convert(context: vscode.ExtensionContext) {
     });
 }
 
-async function move(targetPath: string, filePath: string, platform: string)
+export async function move(targetPath: string, filePath: string, platform: string)
 {
     let cmd = "";
     if(platform.startsWith("Win"))
@@ -132,7 +132,7 @@ async function move(targetPath: string, filePath: string, platform: string)
     });
 }
 
-async function del(targetFilePath: string, platform: string)
+export async function del(targetFilePath: string, platform: string)
 {
     let cmd = "";
     if(platform.startsWith("Win"))

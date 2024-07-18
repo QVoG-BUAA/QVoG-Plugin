@@ -18,10 +18,6 @@
         "title": "Config"
       },
       {
-        "command": "qvog-plugin.convert",
-        "title": "Convert"
-      },
-      {
         "command": "qvog-plugin.query",
         "title": "Query"
       }

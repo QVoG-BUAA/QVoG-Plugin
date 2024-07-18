@@ -1,6 +1,6 @@
-2024-07-15 10:03:49,194 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin}
-2024-07-15 10:03:49,194 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin}
-2024-07-15 10:03:49,202 ERROR [main][Client.java:541] - Initialization failed
+2024-07-18 10:06:03,406 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin}
+2024-07-18 10:06:03,406 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin}
+2024-07-18 10:06:03,418 ERROR [main][Client.java:541] - Initialization failed
 java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
 	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
 	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
@@ -14,7 +14,7 @@ java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) c
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:03:27.837716900Z thread=gremlin-driver-conn-scheduler-1}
+Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-18T02:05:42.003534500Z thread=gremlin-driver-conn-scheduler-1}
 	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
 	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
 	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
@@ -33,7 +33,7 @@ Caused by: java.net.ConnectException: Connection timed out: no further informati
 	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:03:49,202 ERROR [main][Client.java:541] - Initialization failed
+2024-07-18 10:06:03,418 ERROR [main][Client.java:541] - Initialization failed
 java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
 	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
 	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
@@ -47,216 +47,12 @@ java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) c
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:03:27.837716900Z thread=gremlin-driver-conn-scheduler-1}
+Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.15.39/211.71.15.39:20010, hostUri=ws://211.71.15.39:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-18T02:05:42.003534500Z thread=gremlin-driver-conn-scheduler-1}
 	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
 	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
 	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
 	... 7 more
 Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.15.39:20010
-Caused by: java.net.ConnectException: Connection timed out: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:16:04,810 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin}
-2024-07-15 10:16:04,810 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin}
-2024-07-15 10:16:04,813 ERROR [main][Client.java:541] - Initialization failed
-java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:98)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$new$5(Client.java:587)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$initializeImplementation$0(Client.java:537)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:15:43.453235700Z thread=gremlin-driver-conn-scheduler-1}
-	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
-	... 7 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.6.3:20010
-Caused by: java.net.ConnectException: Connection timed out: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:16:04,813 ERROR [main][Client.java:541] - Initialization failed
-java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:98)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$new$5(Client.java:587)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$initializeImplementation$0(Client.java:537)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:15:43.453235700Z thread=gremlin-driver-conn-scheduler-1}
-	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
-	... 7 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.6.3:20010
-Caused by: java.net.ConnectException: Connection timed out: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:17:10,048 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin}
-2024-07-15 10:17:10,048 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin}
-2024-07-15 10:17:10,052 ERROR [main][Client.java:541] - Initialization failed
-java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:98)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$new$5(Client.java:587)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$initializeImplementation$0(Client.java:537)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:16:48.695277300Z thread=gremlin-driver-conn-scheduler-1}
-	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
-	... 7 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.6.3:20010
-Caused by: java.net.ConnectException: Connection timed out: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:17:10,052 ERROR [main][Client.java:541] - Initialization failed
-java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:98)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$new$5(Client.java:587)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$initializeImplementation$0(Client.java:537)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:16:48.695277300Z thread=gremlin-driver-conn-scheduler-1}
-	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
-	... 7 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.6.3:20010
-Caused by: java.net.ConnectException: Connection timed out: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:21:26,907 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin}
-2024-07-15 10:21:26,907 ERROR [gremlin-driver-host-scheduler-1][Client.java:596] - Could not initialize client for Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin}
-2024-07-15 10:21:26,912 ERROR [main][Client.java:541] - Initialization failed
-java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:98)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$new$5(Client.java:587)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$initializeImplementation$0(Client.java:537)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:21:05.566784700Z thread=gremlin-driver-conn-scheduler-1}
-	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
-	... 7 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.6.3:20010
-Caused by: java.net.ConnectException: Connection timed out: no further information
-	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
-	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
-	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
-	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
-	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2024-07-15 10:21:26,912 ERROR [main][Client.java:541] - Initialization failed
-java.util.concurrent.CompletionException: Could not initialize 2 (minPoolSize) connections in pool. Successful connections=0. Closing the connection pool.
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:164)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:103)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.<init>(ConnectionPool.java:98)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$new$5(Client.java:587)
-	at org.apache.tinkerpop.gremlin.driver.Client$ClusteredClient.lambda$initializeImplementation$0(Client.java:537)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-Caused by: org.apache.tinkerpop.gremlin.driver.exception.ConnectionException: Could not open Connection{channel=null host=Host{address=211.71.6.3/211.71.6.3:20010, hostUri=ws://211.71.6.3:20010/gremlin} isDead=false borrowed=0 pending=0 markedReplaced=false closing=false created=2024-07-15T02:21:05.566784700Z thread=gremlin-driver-conn-scheduler-1}
-	at org.apache.tinkerpop.gremlin.driver.Connection.<init>(Connection.java:143)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionFactory.create(ConnectionFactory.java:34)
-	at org.apache.tinkerpop.gremlin.driver.ConnectionPool.lambda$new$0(ConnectionPool.java:130)
-	... 7 more
-Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection timed out: no further information: /211.71.6.3:20010
 Caused by: java.net.ConnectException: Connection timed out: no further information
 	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
 	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
